@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Select an option</label>
+    <select id="selection">
+        <option value="Domain">Domain</option>
+        <option value="Path">Path</option>
+    </select>
+    <script>
+        function CheckChoice() {
+            let sel = document.getElementById("selection").selectedIndex;
+            if(sel==0)
+                alert("The domain is : " + document.domain);
+            if(sel==1)
+                alert("The path is : " + window.location.pathname);
+        }
+    </script>
+
+    <label style="font-family:'Courier New', Courier, monospace ;">Press to see </label>
+    <button onclick="CheckChoice()">Show</button>
+</body>
+</html>
