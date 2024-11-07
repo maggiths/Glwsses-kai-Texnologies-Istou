@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let win;
+        function NewWindow() {
+            var page = document.getElementById("givenURL").value;
+            win = window.open(page, "", "width=200, height=200, resizable=yes");
+        }
+
+        function ResizeWindow() {
+            var w = parseInt(document.getElementById("width").value);
+            var h = parseInt(document.getElementById("height").value);
+            if (win && !win.closed) {
+                if (typeof win.resizeTo === "function") { // Έλεγχος αν το resizeTo είναι διαθέσιμο
+                    win.resizeTo(w, h); // Κάνει resize το παράθυρο
+                } else {
+                    alert("Το resizeTo δεν είναι διαθέσιμο.");
+                }
+            } else {
+                alert("The window is not open or was blocked by the browser.");
+            }
+        }
+    </script>
+
+
+    <input id="givenURL" type="text">
+    <button onclick="NewWindow()">Open Website</button><br>
+    <input id="width" type="text">
+    <input id="height" type="text">
+    <button onclick="ResizeWindow()">Resize Website</button>
+</body>
+</html>
