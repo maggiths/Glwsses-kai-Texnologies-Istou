@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ClearFields() {
+            document.getElementById("givenURL").value = "";
+            document.getElementById("apotelesma").value = "0";
+        }
+
+        function VisitUrl() {
+            var urlvisit = document.getElementById("givenURL").value;
+            if (urlvisit !="") {
+                window.location.href = "http://" + urlvisit;
+            }
+            else
+                alert("Den dothike url");
+        }
+    </script>
+
+    <label style="font-family: Arial, Helvetica, sans-serif;">Δώσε ένα URL</label>
+    <input id = "givenURL" type = "text">
+    <input type = "button" onclick = "VisitUrl()" value = "Go"><br>
+    <br>
+    <input type = "button" onclick = "ClearFields()" value = "Clear">
+</body>
+</html>
