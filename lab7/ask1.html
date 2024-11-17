@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 1</title>
+</head>
+<body>
+    <script>
+        function ChangeColor() {
+            var clr = document.getElementById("color").value;
+            if (clr == "")
+                document.getElementById("color").style.backgroundColor = "red";
+            else if (isNaN(clr))
+                document.getElementById("color").style.backgroundColor = "green";
+            else
+                document.getElementById("color").style.backgroundColor = "yellow";
+        }
+    </script>
+  
+    <label style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Type something here : </label>
+    <input id = "color" type = "text" onchange="ChangeColor()">
+</body>
+</html>
