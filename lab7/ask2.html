@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 2</title>
+</head>
+<body>
+    <script>
+        function UpperCase() {
+            let wrd = document.getElementById("text1").value;
+            document.getElementById("text2").value = wrd.toUpperCase();
+        }
+    </script>
+    
+    <label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Type text here : </label>
+    <input id = "text1" type = "text" onkeyup="UpperCase()"> <br> <hr>
+    <label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Text converted to uppercase here : </label>
+    <input id = "text2" type = "text">
+</body>
+</html>
