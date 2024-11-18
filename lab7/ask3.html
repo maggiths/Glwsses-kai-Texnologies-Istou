@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 3</title>
+</head>
+<body>
+    <script>
+        function Image1() {
+            document.getElementById("img").src = "Sunset.jpg"
+        }
+
+        function Image2() {
+            document.getElementById("img").src = "PalmBeach.jpg";
+        }
+
+        function Image3() {
+            document.getElementById("img").src = "SandyBeach.jpg";
+        }
+    </script>
+
+    <img id = "img" src="Sunset.jpg" onmouseout="Image1()" onmouseover="Image2()" onmousedown="Image3()">
+</body>
+</html>
