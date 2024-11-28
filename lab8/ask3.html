@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 3</title>
+</head>
+<body>
+    <script>
+        let clicks = 0;
+        function MyChoice(event) {
+            if (clicks<3) {
+                event.target.innerHTML = "Με επέλεξες!!!";
+                clicks = clicks + 1;
+            }
+            else {
+                event.target.onlick = null;
+                alert("Epelekses parapanw apo 3 grammes!");
+            }
+        }
+    </script>
+    <ul id="myId" onclick = "MyChoice(event)">
+        <li>Prwth grammh</li>
+        <li>Deuterh grammh</li>
+        <li>Trith grammh</li>
+        <li>Tetarth grammh</li>
+        <li>Pempth grammh</li>
+        <li>Ekth grammh</li>
+    </ul>
+</body>
+</html>
