@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 1</title>
+</head>
+<body onmouseover = "Trigger(event)">
+    <script>
+        function Trigger(event) {
+            document.getElementById("textbox").value = event.target.tagName;
+            document.getElementById("message").value = event.target.innerHTML;
+        }
+    </script>
+
+    <input type = "text" id = "textbox"> <br>
+    <textarea id = "message"></textarea>
+    <h1>Teleio plhktrologio </h1>
+    <p>Espasa ta gyalia moy xthes kai den vlepw twra</p>
+</body>
+</html>
