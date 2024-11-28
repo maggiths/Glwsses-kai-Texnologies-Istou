@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 4</title>
+    <style>
+        .customcolors{
+            color:red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function ChangeColors() {
+            const myElements = document.getElementsByTagName("a");
+            for(var i=0;i<myElements.length;i=i+1)
+                myElements[i].setAttribute("class", "customcolors");
+        }
+    </script>
+
+    <a href = "ask1.html">Askisi 8.1</a>
+    <a href = "ask2.html">Askisi 8.2</a>
+    <a href = "ask3.html">Askisi 8.3</a>
+    <button id = "change colors" onclick = "ChangeColors()"></button>
+</body>
+</html>
