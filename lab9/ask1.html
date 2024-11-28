@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 1</title>
+</head>
+<body>
+    <script>
+        var pos = 0;
+        const urls = ["PalmBeach.jpg", "SandyBeach.jpg", "Sunset.jpg"];
+        function Next() {
+            if(pos<urls.length-1)
+                pos = pos+1;
+            else
+                pos = 0;
+            document.getElementById("img").src = urls[pos];     
+        }
+
+        function Previous() {
+            if(pos>0)
+                pos=pos-1;
+            else
+                pos = urls.length-1;
+            document.getElementById("img").src = urls[pos];
+        }
+    </script> 
+
+    <img id="img" src="PalmBeach.jpg" width="500px" height="300px"><br>
+    <button onclick="Previous()">Previous</button>
+    <button onclick="Next()">Next</button>
+</body>
+</html>
