@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pos = 0;
+        var start;
+        var stop;
+        const urls = ["PalmBeach.jpg", "SandyBeach.jpg", "Sunset.jpg"];
+
+        function Move() {
+            pos = pos + 1;
+            if(pos==urls.length)
+                pos = 0;
+            document.getElementById("img").src = urls[pos];     
+        }
+
+        function Start() {
+            start = setInterval(Move,1000);
+            stop = setTimeout(Stop, document.getElementById("sec").value);
+        }
+            
+
+        function Stop() {
+            clearInterval(start);
+        }
+
+        function Cancel() {
+            clearTimeout(stop);
+        }
+    </script> 
+
+    <img id="img" src="PalmBeach.jpg" width="500px" height="300px"><br>
+    <button onclick="Start()">Start</button>
+    <button onclick="Stop()">Stop</button><br>
+    <input type="text" id="sec"><br>
+    <button onclick="Cancel()">Cancel</button>
+</body>
+</html>
