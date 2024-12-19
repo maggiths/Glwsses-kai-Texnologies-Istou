@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 6</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+        td {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function Add() {
+            const array = document.getElementById("myTable");
+            for(i=0;i<array.rows.length;i=i+1)
+                for(j=0;j<array.rows[i].cells.length;j=j+1) {
+                    n = Math.random() * 10;
+                    array.rows[i].cells[j].innerHTML = n;
+                    if (n<5)
+                        array.rows[i].cells[j].style.background = "red";
+                    else
+                        array.rows[i].cells[j].style.background = "green";
+                }
+        }
+    </script>
+    <table id="myTable">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <input type="button" id="button" value="Add" onclick="Add()">
+</body>
+</html>
