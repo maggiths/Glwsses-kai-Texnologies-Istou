@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 5</title>
+</head>
+<body>
+    <script>
+        function Add() {
+            if(document.getElementById("text").value != "") {
+                var list = document.getElementById("list");
+                var newOpt = document.createElement("option");
+                newOpt.text = document.getElementById("text").value;
+                list.options.add(newOpt, 1);
+                document.getElementById("text").value = "";
+            }
+        }
+    </script>
+
+    <form>
+        <input type="text" id="text">
+        <input id="add" type="button" value="Add" onclick="Add()">
+        <select type="listbox" id="list"></select>
+    </form>
+</body>
+</html>
