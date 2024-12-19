@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var btn = true;
+        function ChangePhoto() {
+            if(btn) {
+                document.getElementById("button").setAttribute("value", "Disappear");
+                for(i=0; i < document.images.length; i = i + 1)
+                    document.getElementById("images").innerHTML = document.getElementById("images").innerHTML + "<br>" + document.images[i].src;
+                }
+                else {
+                    document.getElementById("button").setAttribute("value", "Appear");
+                    document.getElementById("images").innerHTML = "";
+                }
+            btn = !btn;
+        }
+    </script>
+    <input type= "button" value="Appear" id="button" onclick="ChangePhoto()">
+    <div id="images"></div>
+    <img src = "PalmBeach.jpg" id="PalmBeach" width="500px" height="300px"><br>
+    <img src = "SandyBeach.jpg" id="SandyBeach" width="500px" height="300px"><br>
+    <img src = "Sunset.jpg" id="Sunset" width="500px" height="300px">
+</body>
+</html>
