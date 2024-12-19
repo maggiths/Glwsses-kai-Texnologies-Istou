@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ChangeColor() {
+            /*document.links[0].style.color = "green";
+            document.links[1].style.color = "green";
+            document.links[2].style.color = "red";
+            document.links[3].style.color = "red";*/
+            let myDomain = document.location.hostname;
+            for(i=0; i<document.links.length; i = i + 1) {
+                if(myDomain == document.links[i].hostname)
+                    document.links[i].style.color = "green";
+                else
+                document.links[i].style.color = "red";
+            }
+        }
+    </script>
+    <a href = "ask1.html">ask1</a>
+    <a href="ask2.html">ask2</a>
+    <a href="https://www.facebook.com/">facebook</a>
+    <a href="https://www.instagram.com/">instagram</a>
+    <button onclick="ChangeColor()">Color</button>
+</body>
+</html>
