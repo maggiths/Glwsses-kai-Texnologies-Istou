@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 1</title>
+    <style>
+        table,tr,td {
+            border: 1px solid black;
+        }
+        tr,td {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function Start() {
+            var num;
+            num = Math.round((Math.random()*9)+3);
+            document.getElementById("random").innerHTML = num;
+            const array = document.getElementById("MyTable");
+            for(i=0;i<array.rows.length;i=i+1){
+                for(j=0;j<array.rows[i].cells.length;j=j+1){
+                    n = Math.round(Math.random() * 100);
+                    array.rows[i].cells[j].innerHTML = n;
+                }
+            }
+            
+            var timeLeft = 30;
+            var elem = document.getElementById('some_div');
+            var timerId = setInterval(countdown, 1000);
+            function countdown() {
+                if (timeLeft == -1) {
+                    clearTimeout(timerId);
+                    doSomething();
+                } else {
+                    elem.innerHTML = timeLeft + ' seconds remaining';
+                    timeLeft--;
+                }
+            }
+        }
+    </script>
+    <input type="button" id="button" value="Start" onclick="Start()"> <br>
+    <div id="random"></div>
+    <div id="some_div"></div>
+    <table id="MyTable">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
