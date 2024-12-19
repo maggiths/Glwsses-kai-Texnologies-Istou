@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Change() {
+            const element = document.getElementById("myDIV");
+            let sel = element.getElementsByClassName("D");
+                if(document.getElementById("com").selectedIndex == 0) {
+                    var color = document.getElementById("color").value;
+                    var size = document.getElementById("number").value;
+                    sel[0].style.color = color;
+                    sel[0].style.fontSize = size;
+                }
+                else if(document.getElementById("com").selectedIndex == 1) {
+                    var color = document.getElementById("color").value;
+                    var size = document.getElementById("number").value;
+                    sel[1].style.color = color;
+                    sel[1].style.fontSize = size;
+                    sel[3].style.color = color;
+                    sel[3].style.fontSize = size;
+                }
+                else {
+                    var color = document.getElementById("color").value;
+                    var size = document.getElementById("number").value;
+                    sel[2].style.color = color;
+                    sel[2].style.fontSize = size;
+                }
+        }
+    </script>
+
+    <select id="com" type="combobox">
+        <option>Highlight Text</option>
+        <option>Notification Text</option>
+        <option>Plain Text</option>
+    </select>
+    <input type="color" id="color">
+    <input type="number" id="number">
+    <input type="button" id="button" value="Change color and number" onclick="Change()">
+    <div id="myDIV">
+        <p class="D">O Maggiths einai 19 kai spoudazei Mhxanikos Plhroforikhs</p>
+        <p class="D">H Paulina einai 19 kai spoudazei Iatrikh</p>
+        <span class="D">O Leuterhs einai 19 kai spoudazei Oikonomiko</span><br><br>
+        <span class="D">O Mwyshs einai sxedon 20 kai spoudazei Mathimatiko</span>
+    </div>
+</body>
+</html>
