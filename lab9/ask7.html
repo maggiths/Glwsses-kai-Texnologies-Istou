@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var btn = true;
+        var btnText = "Color";
+        function Color() {
+            const selectedElements = document.getElementsByTagName("h" + (document.getElementById("com").selectedIndex + 1));
+            if(btn) {
+                btnText = "Decolor";
+                for(i=0;i<selectedElements.length;i=i+1)
+                    selectedElements[i].style.backgroundColor = "yellow";
+            }
+            else {
+                btnText = "Color";
+                for(i=0;i<selectedElements.length;i=i+1)
+                    selectedElements[i].style.backgroundColor = "white";
+            }
+            btn = !btn;
+            document.getElementById("button").setAttribute("value", btnText);    
+        }
+    </script>
+    <select id="com" type = "combobox">
+        <option>1st stage</option>
+        <option>2nd stage</option>
+    </select>
+    <input type = "button" id="button" value="Color" onclick="Color()"> 
+    <h1>Maggiths</h1>
+    <h2>Paulina</h2>
+    <h1>Vaggelis</h1>
+    <h2>Bal</h2>   
+</body>
+</html>
