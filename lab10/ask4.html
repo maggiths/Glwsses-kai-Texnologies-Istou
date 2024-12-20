@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 1</title>
+</head>
+<body>
+    <script>
+        function Check(event) {
+            const userConfirmed = confirm("Are you sure you want to open this page?");
+            if (!userConfirmed) {
+                event.preventDefault();
+                var text = "You canceled!";
+                document.getElementById("text").innerHTML = text;
+            }
+        }
+    </script>
+
+    <a href="https://www.instagram.com/" target="_blank" id="instagram" onclick="Check(event)" >Instagram</a><br><br>
+    <a href="https://www.facebook.com/" target="_blank" id="facebook" onclick="Check(event)">Facebook</a><br><br>
+    <a href="https://youtube.com/" target="_blank" id="youtube" onclick="Check(event)">YouTube</a><br><br>
+    <p id="text"></p>
+</body>
+</html>
