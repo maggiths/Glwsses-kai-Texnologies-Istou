@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askisi 6</title>
+    <style>
+        table,tr,td {
+            border : 1px solid black;
+        }
+        tr,td {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function Create() {
+            var table = document.getElementById("myTable");
+            var rows = document.getElementById("rows").value;
+            var cells = document.getElementById("cells").value;
+            for(i=0;i<rows;i=i+1) {
+                var row = table.insertRow(i);
+                for(j=0;j<cells;j=j+1) {
+                    row.insertCell(j);
+                }
+            }
+        }
+
+        function DeleteRow() {
+            var last = document.getElementById("rows").value;
+            document.getElementById("myTable").deleteRow(last-1);
+        }
+
+        function DeleteCell() {
+            var rows = document.getElementById("rows").value;
+            var last = document.getElementById("cells").value;
+            var table = document.getElementById("myTable");
+            for(i=0;i<rows;i=i+1)
+                table.rows[i].deleteCell(last-1);
+        }
+    </script>
+
+    <input type="text" id="rows">
+    <input type="text" id="cells">
+    <input type="button" id="button" value="Create" onclick="Create()">
+    <input type="button" id="deleter" value="Delete Row" onclick="DeleteRow()">
+    <input type="button" id="deletec" value="Delete Cell" onclick="DeleteCell()">
+    <table id="myTable"></table>
+</body>
+</html>
